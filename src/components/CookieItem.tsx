@@ -4,7 +4,6 @@ import React from "react";
 interface Cookie {
   name: string;
   size: number;
-  essential: boolean;
 }
 
 interface CookieItemProps {
@@ -14,7 +13,6 @@ interface CookieItemProps {
 const CookieItem: React.FC<CookieItemProps> = ({ cookie }) => {
   const handleDragStart = (e: React.DragEvent) => {
     e.dataTransfer.setData("cookieName", cookie.name);
-    e.dataTransfer.setData("essential", String(cookie.essential));
   };
 
   return (
@@ -23,7 +21,7 @@ const CookieItem: React.FC<CookieItemProps> = ({ cookie }) => {
       onDragStart={handleDragStart}
       style={{
         padding: "10px",
-        backgroundColor: cookie.essential ? "lightcoral" : "lightblue",
+        backgroundColor: "lightblue",
       }}
     >
       {cookie.name} ({cookie.size}KB)
