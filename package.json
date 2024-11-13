@@ -1,0 +1,8 @@
+{
+  "name": "cookie-trashcan",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/moonhr/cookie-trashcan.git",
+  "author": "moonhr <moonhr153@gmail.com>",
+  "license": "MIT"
+}
